@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Default Progress bars</h4>  
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-primary progress-bar-striped active"   [style.width]="getBarra1"  style="height:15px;" role="progressbar">
+                   
+                    </div>
+                   
+                </div>   
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-info progress-bar-striped active"  [style.width]="getBarra2" style="height:15px;" role="progressbar">
+                   
+                    </div>
+            
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-contador  (valorBar)="barra1=$event" [prograso]="60"></app-contador>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-contador (valorBar)="barra2=$event" [btnClass]="'btn-info'"></app-contador>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,12 @@
+
+<div class="input-group">
+    <span class="input-group-btn">
+        <button [ngClass]="btnClass" (click)="cambiarValor(-5)" type="button">Hate it</button>
+    </span>
+
+        <input type="number" class="form-control" [ngClass]="{'is-invalid': prograso > 100 || prograso < 0}" [(ngModel)]="prograso" min="0" (ngModelChange)="onChange($event)" max="100"  placeholder="Product name">
+    
+    <span class="input-group-btn">
+        <button class="btn btn-success" (click)="cambiarValor(5)" type="button">Love it</button>
+    </span>
+</div>
